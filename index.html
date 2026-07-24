@@ -1636,12 +1636,40 @@ body.loaded .hero-anim{animation:none}
   /* ============ APPLY FORM ============ */
   var form=document.getElementById('applyForm'), toast=document.getElementById('toast'), toastMsg=document.getElementById('toastMsg'), toastTimer;
   function showToast(msg){ toastMsg.textContent=msg; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(function(){toast.classList.remove('show');},4000); }
+  /* ---- Supabase database ---- */
+  var SUPA_URL='https://mzztxkydenvuimfdjexf.supabase.co';
+  var SUPA_KEY='sb_publishable_eqeen9YIUlvpOiyezcrIrg_RunbIveB';
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var name=document.getElementById('pname'),phone=document.getElementById('pphone');
+    var name=document.getElementById('pname'),phone=document.getElementById('pphone'),grade=document.getElementById('pgrade');
     if(!name.value.trim()){ name.focus(); showToast(t('Iltimos, ismni kiriting.','Please enter a name.')); return; }
     if(!phone.value.trim()){ phone.focus(); showToast(t('Iltimos, telefon raqamini kiriting.','Please enter a phone number.')); return; }
-    showToast(t('Rahmat! Tez orada siz bilan bog\'lanamiz.','Thank you! We will contact you shortly.')); form.reset();
+    var btn=form.querySelector('button[type="submit"]');
+    if(btn) btn.disabled=true;
+    showToast(t('Yuborilmoqda…','Sending…'));
+    fetch(SUPA_URL+'/rest/v1/applications',{
+      method:'POST',
+      headers:{
+        'apikey':SUPA_KEY,
+        'Authorization':'Bearer '+SUPA_KEY,
+        'Content-Type':'application/json',
+        'Prefer':'return=minimal'
+      },
+      body:JSON.stringify({
+        name:name.value.trim(),
+        phone:phone.value.trim(),
+        grade:grade?grade.value:null,
+        lang:lang
+      })
+    }).then(function(res){
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      showToast(t('Rahmat! Arizangiz qabul qilindi. Tez orada bog\'lanamiz.','Thank you! Your request has been received. We will contact you shortly.'));
+      form.reset();
+    }).catch(function(){
+      showToast(t('Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring yoki telefon qiling.','Something went wrong. Please try again or call us.'));
+    }).finally(function(){
+      if(btn) btn.disabled=false;
+    });
   });
 
   /* ============ IMAGE RESIZE + PALETTE ============ */
