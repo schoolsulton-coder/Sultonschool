@@ -267,6 +267,7 @@ section{padding-block:clamp(4.5rem,9vw,8rem); position:relative}
 .director__role{font-size:.86rem;color:var(--lapis);font-weight:700;letter-spacing:.04em;margin-top:.25rem}
 .director__quote{font-family:'Manrope',system-ui,-apple-system,sans-serif;font-size:1.3rem;font-style:italic;line-height:1.4;color:var(--ink);position:relative;padding-left:1.3rem}
 .director__quote::before{content:"“";position:absolute;left:-.1rem;top:-.6rem;font-size:3rem;color:var(--gold);font-family:'Manrope',system-ui,-apple-system,sans-serif;line-height:1}
+.director__quote::after{content:"”";color:var(--gold);font-family:'Manrope',system-ui,-apple-system,sans-serif;font-weight:700;font-size:1.5em;line-height:0;margin-left:.04em;vertical-align:-.35em}
 .director__book{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.6em;font-size:.85rem;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:.5em .9em;border-radius:10px}
 .director__book svg{width:16px;height:16px;color:var(--gold)}
 
@@ -890,18 +891,18 @@ body.loaded .hero-anim{animation:none}
       <span class="eyebrow" data-en="About us">Biz haqimizda</span>
       <h2 class="serif" id="aboutTitle" style="font-size:clamp(2.1rem,4.6vw,3.4rem);margin-bottom:1.4rem">Yangi maktab, mustahkam qadriyatlar</h2>
       <p id="aboutP1">Sulton School — Angrenda ta'lim faoliyatini boshlayotgan yangi avlod maktabi. Biz bilimni uch bosqich — boshlang'ich, o'rta va tayyorlov — orqali izchil quramiz, shunda har bir yil oldingisiga mustahkam tayanadi.</p>
-      <p id="aboutP2">Yangi maktab bo'lsak-da, tajribali ustozlar, zamonaviy metodika va aniq maqsad bilan ish boshlaymiz: ishonchli, qiziquvchan va mehribon yoshlarni tarbiyalash.</p>
+      <p id="aboutP2">Yangi maktab bo'lsak-da, tajribali ustozlar, zamonaviy metodika va aniq maqsad bilan ish boshlaymiz, ya'ni ishonchli, qiziquvchan va mehribon yoshlarni tarbiyalaymiz.</p>
       <ul class="about__list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-en="Three connected stages: elementary, middle, prep">Uch bosqichli izchil tizim: boshlang'ich, o'rta, tayyorlov</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-en="Experienced teachers and modern methodology">Tajribali ustozlar va zamonaviy metodika</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-en="Warm, disciplined and inspiring atmosphere">Issiq, intizomli va ilhomlantiruvchi muhit</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-en="Healthy, disciplined and inspiring atmosphere">Sog'lom, intizomli va ilhomlantiruvchi muhit</span></li>
       </ul>
     </div>
     <aside class="director reveal d2">
       <div class="director__top">
-        <div class="director__avatar" id="dirAvatar">AM</div>
+        <div class="director__avatar" id="dirAvatar">TB</div>
         <div>
-          <div class="director__name" id="dirName">Abubakir Muhammadov</div>
+          <div class="director__name" id="dirName">Tursunboyev Bakirjon Muxammadjon o'g'li</div>
           <div class="director__role" id="dirRole">Asoschi va direktor</div>
         </div>
       </div>
@@ -917,7 +918,7 @@ body.loaded .hero-anim{animation:none}
     <div class="section-head reveal">
       <span class="eyebrow" data-en="Our teachers">Bizning ustozlar</span>
       <h2 data-en="The people who will guide your child">Farzandingizni yetaklaydigan insonlar</h2>
-      <p data-en="A team chosen with care — experienced, warm and devoted to every student's growth.">Katta e'tibor bilan tanlangan jamoa — tajribali, mehribon va har bir o'quvchi rivojiga bag'ishlangan.</p>
+      <p data-en="A carefully chosen, experienced and warm team devoted to every student's personal development.">Katta e'tibor bilan tanlangan tajribali va mehribon jamoa faoliyati har bir o'quvchining shaxsiy rivojlanishiga bag'ishlangan.</p>
     </div>
     <div class="teachers__grid" id="teachersGrid"></div>
   </div>
@@ -1407,9 +1408,9 @@ body.loaded .hero-anim{animation:none}
     about:{titleUz:'Yangi maktab, mustahkam qadriyatlar',titleEn:'A new school, timeless values',
       p1Uz:'Sulton School — Angrenda ta\'lim faoliyatini boshlayotgan yangi avlod maktabi. Biz bilimni uch bosqich — boshlang\'ich, o\'rta va tayyorlov — orqali izchil quramiz, shunda har bir yil oldingisiga mustahkam tayanadi.',
       p1En:'Sulton School is a new-generation school opening its doors in Angren. We build knowledge across three connected stages — elementary, middle and preparatory — so each year rests firmly on the last.',
-      p2Uz:'Yangi maktab bo\'lsak-da, tajribali ustozlar, zamonaviy metodika va aniq maqsad bilan ish boshlaymiz: ishonchli, qiziquvchan va mehribon yoshlarni tarbiyalash.',
+      p2Uz:'Yangi maktab bo\'lsak-da, tajribali ustozlar, zamonaviy metodika va aniq maqsad bilan ish boshlaymiz, ya\'ni ishonchli, qiziquvchan va mehribon yoshlarni tarbiyalaymiz.',
       p2En:'Though we are new, we begin with experienced teachers, modern methodology and a clear mission: to raise confident, curious and kind young people.',
-      dirName:'Abubakir Muhammadov',dirRoleUz:'Asoschi va direktor',dirRoleEn:'Founder & Director',
+      dirName:'Tursunboyev Bakirjon Muxammadjon o\'g\'li',dirRoleUz:'Asoschi va direktor',dirRoleEn:'Founder & Director',
       dirQuoteUz:'Har bir bolada uchqun bor. Bizning vazifamiz uni to\'ldirish emas, balki o\'sha uchqunning alangaga aylanishiga yordam berish.',
       dirQuoteEn:'Every child carries a spark. Our task is not to fill them, but to help that spark rise into a flame.',
       dirBookUz:'“Yuksalish” kitobi muallifi',dirBookEn:'Author of “Yuksalish”',dirPhoto:''},
