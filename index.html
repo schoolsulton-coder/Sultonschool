@@ -102,7 +102,7 @@ button{font:inherit; color:inherit; cursor:pointer; border:0; background:none}
 
 .container{width:100%; max-width:var(--container); margin-inline:auto; padding-inline:clamp(20px,5vw,40px)}
 .serif{font-family:'Manrope',system-ui,-apple-system,sans-serif}
-.hl{color:var(--gold); font-style:italic}
+.hl{color:var(--gold); font-style:italic; padding-right:.14em}
 
 /* eyebrow */
 .eyebrow{
@@ -701,7 +701,7 @@ body.loaded .hero-anim{animation:none}
   <div class="topbar">
     <div class="container topbar__row">
       <span class="topbar__note">
-        <span class="dot"></span><span data-en="Enrollment open for the 2025–2026 academic year">2025–2026 o'quv yiliga qabul ochiq</span>
+        <span class="dot"></span><span data-en="Enrollment open for the 2026–2027 academic year">2026–2027 o'quv yiliga qabul ochiq</span>
       </span>
       <div class="topbar__actions">
         <a class="tb-phone" href="tel:+998787070505" data-bindhref="phone" aria-label="Qo'ng'iroq qilish">
@@ -771,7 +771,7 @@ body.loaded .hero-anim{animation:none}
   </div>
   <div class="container hero__inner">
     <div class="hero__content">
-      <span class="badge-open hero-anim h1" id="heroBadge"><span class="spark"></span><span id="heroBadgeText">2025 — Birinchi qabul ochiq</span></span>
+      <span class="badge-open hero-anim h1" id="heroBadge"><span class="spark"></span><span id="heroBadgeText">2026 — Birinchi qabul ochiq</span></span>
       <span class="hero__eyebrow hero-anim h1">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg>
         <span data-en="Angren · Tashkent region">Angren · Toshkent viloyati</span>
@@ -1042,7 +1042,7 @@ body.loaded .hero-anim{animation:none}
   <span class="glow" aria-hidden="true"></span>
   <div class="container apply__grid">
     <div class="apply__text reveal">
-      <span class="apply__eyebrow" data-en="Admission 2025–2026">Qabul 2025–2026</span>
+      <span class="apply__eyebrow" data-en="Admission 2026–2027">Qabul 2026–2027</span>
       <h2 data-en="Begin your child's rise today">Farzandingiz yuksalishini bugun boshlang</h2>
       <p class="apply__lead" data-en="Leave your details and our team will call you back to arrange a visit and answer every question.">Ma'lumotlaringizni qoldiring — jamoamiz siz bilan bog'lanib, tashrif tashkil qiladi va barcha savollarga javob beradi.</p>
       <div class="apply__alt">
@@ -1169,7 +1169,7 @@ body.loaded .hero-anim{animation:none}
       </div>
     </div>
     <div class="footer__bottom">
-      <span><span data-bind="brandName">Sulton</span> School © 2025 · <span data-en="All rights reserved.">Barcha huquqlar himoyalangan.</span></span>
+      <span><span data-bind="brandName">Sulton</span> School © 2026 · <span data-en="All rights reserved.">Barcha huquqlar himoyalangan.</span></span>
       <span class="footer__tag" data-bind="tagline">Kelajak sultonlari shu yerdan boshlanadi.</span>
       <button class="admin-trigger" id="adminOpen" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0-1.1-2.7H1a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 2.6 7a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H7a1.6 1.6 0 0 0 1-1.5V1a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 2.7 1.1 1.6 1.6 0 0 0 .3-1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2) scale(.83)"/></svg>
@@ -1393,7 +1393,7 @@ body.loaded .hero-anim{animation:none}
   /* ============ DATA MODEL ============ */
   var DEFAULTS={
     brand:{name:'Sulton',tagline:'Kelajak sultonlari shu yerdan boshlanadi.',taglineEn:"Where tomorrow's leaders take shape.",logo:'',primary:'#CE1126',accent:'#FFC129'},
-    hero:{badgeUz:'2025 — Birinchi qabul ochiq',badgeEn:'2025 — First intake open',
+    hero:{badgeUz:'2026 — Birinchi qabul ochiq',badgeEn:'2026 — First intake open',
       titleUz:'Kelajak <span class="hl">sultonlari</span> shu yerdan boshlanadi',
       titleEn:'Where tomorrow\'s <span class="hl">leaders</span> take shape',
       subUz:'1–9-sinflar uchun Angrenda yangi ochilayotgan zamonaviy xususiy maktab. Ikki tilli ta\'lim, individual yondashuv va xavfsiz muhit.',
@@ -1402,7 +1402,7 @@ body.loaded .hero-anim{animation:none}
       {value:'1–9',suffix:'',labelUz:'Sinf bosqichlari',labelEn:'Grade levels',count:false},
       {value:'2',suffix:'+',labelUz:'Ta\'lim tili',labelEn:'Languages',count:true},
       {value:'100',suffix:'%',labelUz:'Xavfsiz muhit',labelEn:'Safe environment',count:true},
-      {value:'2025',suffix:'',labelUz:'Birinchi qabul',labelEn:'First intake',count:false}
+      {value:'2026',suffix:'',labelUz:'Birinchi qabul',labelEn:'First intake',count:false}
     ],
     about:{titleUz:'Yangi maktab, mustahkam qadriyatlar',titleEn:'A new school, timeless values',
       p1Uz:'Sulton School — Angrenda ta\'lim faoliyatini boshlayotgan yangi avlod maktabi. Biz bilimni uch bosqich — boshlang\'ich, o\'rta va tayyorlov — orqali izchil quramiz, shunda har bir yil oldingisiga mustahkam tayanadi.',
